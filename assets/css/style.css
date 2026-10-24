@@ -291,3 +291,22 @@ td.num { font-variant-numeric: tabular-nums; }
 .vig-photo figcaption { padding: 0.75rem 1rem; color: #ffffff; font-family: var(--display); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.03em; line-height: 1.35; }
 @media (max-width: 760px) { .vig-photo { max-width: 340px; } }
 @media (prefers-reduced-motion: reduce) { .vig-photo img { transition: none; } }
+
+/* Experience and education pages */
+.roles-full { gap: 2rem; }
+.roles-full > li { padding-bottom: 2rem; border-bottom: 1px solid var(--line); }
+.roles-full > li:last-child { border-bottom: 0; padding-bottom: 0; }
+.roles .org { display: block; color: var(--ink-soft); font-weight: 600; margin-top: 0.15rem; }
+.roles .when { font-weight: 600; color: var(--gold-text); }
+.bul { margin: 0.6rem 0 0; padding-left: 1.2rem; display: grid; gap: 0.45rem; }
+.bul li::marker { color: var(--gold); }
+@media (min-width: 861px) {
+  .roles-full { max-width: none; }
+  .roles-full > li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.75fr); column-gap: 3rem; align-items: start; }
+  .roles-full > li > .head, .roles-full > li > .org { grid-column: 1; }
+  .roles-full > li > .head { flex-direction: column; gap: 0.2rem; }
+  .roles-full > li > .head .when { order: -1; }
+  .roles-full > li > .bul, .roles-full > li > .detail { grid-column: 2; grid-row: 1 / span 3; margin-top: 0; }
+}
+.detail { display: grid; gap: 0.5rem; margin-top: 0.45rem; }
+.detail p { margin: 0; }
